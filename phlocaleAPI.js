@@ -110,6 +110,6 @@ app.get('/api/locale/brgys/:parentId', (req, res) => {
 // =================================================================================
 // start listening
 
-app.listen(process.env.DEF_PORT, (x) => {
+app.listen(process.env.DEF_PORT, () => {
     console.log(`SYSTEM: NodeJS server now running at port ${process.env.DEF_PORT}.`)
 })
