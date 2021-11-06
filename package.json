@@ -1,0 +1,18 @@
+{
+  "name": "philippine_localities_api",
+  "version": "1.0.0",
+  "description": "An API providing the list of places in the Philippines",
+  "main": "phlocaleAPI.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon phlocaleAPI.js"
+  },
+  "author": "Marvin Corido Alcantara",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "https": "^1.0.0"
+  }
+}
