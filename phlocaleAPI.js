@@ -35,6 +35,11 @@ app.get('/', (req,res) => {
   res.end()
 })
 
+// fix the favicon request that results into a 404, halting the API
+app.get('/favicon.ico', (req, res) => {
+    res.send(204).end()
+})
+
 // get all regions:
 app.get('/api/locale/regions', (req, res) => {
     logRouteParams('/api/locale/regions', req)
