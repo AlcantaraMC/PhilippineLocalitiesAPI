@@ -37,7 +37,7 @@ app.get('/', (req,res) => {
 
 // fix the favicon request that results into a 404, halting the API
 app.get('/favicon.ico', (req, res) => {
-    res.send(204).end()
+    res.send(204)
 })
 
 // get all regions:
