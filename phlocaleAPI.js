@@ -5,6 +5,7 @@ const express   = require('express')        // for routers
 const app       = express()                 // instantiation of express object
 const https     = require('https')          // for secure servers
 const cors      = require('cors')           // use for same domain requests
+const fs        = require('fs')             // for reading the SSL certificates
 
 app.use(cors({
     origin: '*'
@@ -28,7 +29,6 @@ function send500Error(err) {
 // RESET THIS CODE WHEN DEPLOYING TO PRODUCTION ENVIRONMENTS
 // RESTRICT THE CORS TO SAME ORIGIN.
 
-
 app.get('/', (req,res) => {
   logRouteParams('/', req.params)
   res.status(403).send('you are not allowed to access this location')
@@ -37,7 +37,8 @@ app.get('/', (req,res) => {
 
 // fix the favicon request that results into a 404, halting the API
 app.get('/favicon.ico', (req, res) => {
-    res.send(204)
+    res.status(204)
+    res.end()
 })
 
 // get all regions:
@@ -115,6 +116,15 @@ app.get('/api/locale/brgys/:parentId', (req, res) => {
 // =================================================================================
 // start listening
 
-app.listen(process.env.DEF_PORT, () => {
-    console.log(`SYSTEM: NodeJS server now running at port ${process.env.DEF_PORT}.`)
+// app.listen(process.env.DEF_PORT, () => {
+//     console.log(`SYSTEM: NodeJS server now running at port ${process.env.DEF_PORT}.`)
+// })
+
+const sslOptions = {
+  key : fs.readFileSync(process.env.SSL_LOC_KEYP),
+  cert : fs.readFileSync(process.env.SSL_LOC_CERT)
+}
+
+var httpsServer = https.createServer(sslOptions, app).listen(process.env.DEF_PORT, () => {
+  console.log(`SYSTEM: NodeJS (http/s) server now running at port ${process.env.DEF_PORT}.`)
 })
