@@ -116,15 +116,26 @@ app.get('/api/locale/brgys/:parentId', (req, res) => {
 // =================================================================================
 // start listening
 
-// app.listen(process.env.DEF_PORT, () => {
-//     console.log(`SYSTEM: NodeJS server now running at port ${process.env.DEF_PORT}.`)
-// })
+const defPort = parseInt(process.env.DEF_PORT);
 
-const sslOptions = {
-  key : fs.readFileSync(process.env.SSL_LOC_KEYP),
-  cert : fs.readFileSync(process.env.SSL_LOC_CERT)
+if (process.env.SERVER_MODE === 'HTTP') {
+    /* start the server in HTTP */
+
+    app.listen(process.env.DEF_PORT, () => {
+        console.log(`SYSTEM: NodeJS server now running at port ${process.env.DEF_PORT}.`)
+    })
+
+} else {
+    /* use HTTPS connection */
+    const sslOptions = {
+        key : fs.readFileSync(process.env.SSL_LOC_KEYP),
+        cert : fs.readFileSync(process.env.SSL_LOC_CERT)
+      }
+      
+      var httpsServer = https.createServer(sslOptions, app).listen(parseInt(process.env.DEF_PORT), () => {
+        console.log(`SYSTEM: NodeJS (http/s) server now running at port ${process.env.DEF_PORT}.`)
+      })
 }
 
-var httpsServer = https.createServer(sslOptions, app).listen(process.env.DEF_PORT, () => {
-  console.log(`SYSTEM: NodeJS (http/s) server now running at port ${process.env.DEF_PORT}.`)
-})
+
+
