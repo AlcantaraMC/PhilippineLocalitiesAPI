@@ -49,7 +49,7 @@ app.get('/api/locale/regions', (req, res) => {
 })
 
 // get all provinces that belong to a specific region
-app.get('/api/locale/provs/:parentId', (req, res) => {
+app.get('/api/locale/provinces/:parentId', (req, res) => {
     logRouteParams('/api/locale/prov/:parentId', req)
     try {
         const provinces = localeList.provincesObj.filter((item) => {
@@ -91,7 +91,7 @@ app.get('/api/locale/cities/:parentId', (req, res) => {
     }
 })
 
-app.get('/api/locale/brgys/:parentId', (req, res) => {
+app.get('/api/locale/barangays/:parentId', (req, res) => {
     logRouteParams('/api/locale/brgys/:parentId', req)
     try {
         const brgys = localeList.barangaysObj.filter((item) => {
