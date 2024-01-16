@@ -1,0 +1,14 @@
+# compose with version 3.8 as syntax
+version: '3.8'
+
+# define services
+services:
+
+  main: 
+
+    # set build path
+    build: ./
+
+    # set port
+    ports:
+      - 2525:2525
