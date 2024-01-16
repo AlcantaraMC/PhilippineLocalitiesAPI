@@ -43,6 +43,8 @@
 		<code>[{"p":"012815","s":"012815001","n":"Aggasi"},{"p":"012815","s":"012815003","n":"Baduang"},{"p":"012815","s":"012815004","n":"Balaoi"},{"p":"012815","s":"012815005","n":"Burayoc"},{"p":"012815","s":"012815006","n":"Caunayan"},{"p":"012815","s":"012815007","n":"Dampig"},{"p":"012815","s":"012815008","n":"Ligaya"},{"p":"012815","s":"012815010","n":"Pancian"},{"p":"012815","s":"012815011","n":"Pasaleng"},{"p":"012815","s":"012815012","n":"Poblacion 1"},{"p":"012815","s":"012815013","n":"Poblacion 2"},{"p":"012815","s":"012815014","n":"Saguigui"},{"p":"012815","s":"012815015","n":"Saud"},{"p":"012815","s":"012815016","n":"Subec"},{"p":"012815","s":"012815017","n":"Tarrag"},{"p":"012815","s":"012815018","n":"Caparispisan"}]</code>
 	</li>
 </ul>
+<h2>Status Codes</h2>
+<p>This API will give a 200/OK if you supplied the correct arguments, and 404/NOT_FOUND otherwise.</p>
 <h2>Scope &amp; Limitations</h2>
 <p>This repository does not cater to very specific locales e.g. street names or subdivisions. Please refer to other libraries or technologies for such purposes.</p>
 <h2>Where To Go From Here</h2>
