@@ -6,7 +6,7 @@
 <ol>
 	<li>You must assign and open a TCP port for this API beforehand. My default in the .env file is 2525.</li>
 	<li>Clone this repository to your desired location.</li>
-	<li>Run <code>npm i</code> or <code>sudo npm i</code> (if using Linux) to install requirements</li>
+	<li>Run <code>npm i</code> or <code>sudo npm i</code> (if using Linux) to install requirements.</li>
 	<li>
 		Edit the .env file to change your desired port, as well as the path to your SSL certificates if ever you need to run this with SSL enabled.<br/>
 		<code>DEF_PORT</code> sets the port where you want to access the API.<br/>
