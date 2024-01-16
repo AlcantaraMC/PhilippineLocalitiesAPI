@@ -125,7 +125,7 @@ if (process.env.SERVER_MODE === 'HTTP') {
         console.log(`SYSTEM: NodeJS server now running at port ${process.env.DEF_PORT}.`)
     })
 
-} else {
+} else if (process.env.SERVER_MODE === 'HTTPS') {
     /* use HTTPS connection */
     const sslOptions = {
         key : fs.readFileSync(process.env.SSL_LOC_KEYP),
@@ -135,6 +135,8 @@ if (process.env.SERVER_MODE === 'HTTP') {
       var httpsServer = https.createServer(sslOptions, app).listen(parseInt(process.env.DEF_PORT), () => {
         console.log(`SYSTEM: NodeJS (http/s) server now running at port ${process.env.DEF_PORT}.`)
       })
+} else {
+    console.error (`Cannot run the API, unknown SERVER_MODE value is read, must be 'HTTP' or 'HTTPS', but ${process.env.SERVER_MODE} is read.`);
 }
 
 
