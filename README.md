@@ -48,4 +48,4 @@
 <h2>Scope &amp; Limitations</h2>
 <p>This repository does not cater to very specific locales e.g. street names or subdivisions. Please refer to other libraries or technologies for such purposes.</p>
 <h2>Where To Go From Here</h2>
-<p>I am monitoring the Philippine Statistics Authority (PSA) reports from time to time. If ever there are changes in names, I am going to update this. For anything, you may email me at marvincoridoalcantara@gmail.com. May this repository be of use to you.</p>
+<p>I am monitoring the Philippine Statistics Authority (PSA) reports from time to time. If ever there are changes in place names or constituents, I am going to update this. For anything, you may email me at marvincoridoalcantara@gmail.com. May this repository be of use to you.</p>
