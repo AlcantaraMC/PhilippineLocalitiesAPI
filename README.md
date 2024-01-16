@@ -1,6 +1,6 @@
 <h2>Rationale</h2>
 <p>
-	This repository is part of my developer's work at the Philippine National Police Academy (www.pnpa.edu.ph). At that time, to speed up development, I was checking some third-party services/APIs where we can outsource the code for the address picker. My search was 	unsuccessful however, and so I decided to create this simple Philippine Localities API that will be accessed by the main system for its functionalities.
+	This repository is part of my developer's work at the Philippine National Police Academy (www.pnpa.edu.ph). At that time, to speed up development, I was checking some third-party services/APIs that we can outsource for the address picker. My search was 	unsuccessful however, and so I decided to create this simple Philippine Localities API that will be accessed by the main system for its functionalities.
 </p>
 <h2>Installation &amp; Configuration</h2>
 <ol>
