@@ -17,7 +17,10 @@
 	<li>Optional: This is also a dockerized application. Use <code>docker-compose up --build</code> to build and deploy the application quickly, or edit the docker-related files to suit your needs.</li>
 </ol>
 <h2>Usage</h2>
-<p>Any library or package (e.g. Axios) that can connect to and consume APIs can use this.</p>
+<p>Any library or package (e.g. Axios) that can connect to and consume APIs can use this. Below is the code in action, as fetched by AJAX.</p>
+<video src="https://github.com/AlcantaraMC/PhilippineLocalitiesAPI/assets/92499563/9348dccc-e30a-487f-a148-6b88c2efdd12"></video>
+
+
 <h2>API Endpoints</h2>
 <ul>
 	<li>
